@@ -1,0 +1,22 @@
+<template name="layout">
+  {{#famousContext id="mainCtx"}}
+    {{#HeaderFooterLayout headerSize="150" footerSize="180"}}
+
+      {{#Surface target="header" class="header" translate="[0,0,100]"}}
+        <div id="header">This is a header</div>
+      {{/Surface}}
+
+      {{#RenderController target="content" transition="slideWindow"}}
+        {{>yield}}
+      {{/RenderController}}
+
+      {{#GridLayout target="footer" dimensions="[4,1]" size="[undefined,true]"}}
+        {{#Surface class="nav-button footer home" size="[undefined, true]"}}<a href="{{pathFor 'home'}}"><i class="fa fa-2x fa-home"></i><br><span>Home</span></a>{{/Surface}}
+        {{#Surface class="nav-button footer users" size="[undefined, true]"}}<a href="{{pathFor 'test'}}"><i class="fa fa-2x fa-user"></i><br><span>Users</span></a>{{/Surface}}
+        {{#Surface class="nav-button footer settings" size="[undefined, true]"}}<i class="fa fa-2x fa-cog"></i><br><span>Settings</span> {{/Surface}}
+        {{#Surface class="nav-button footer settings" size="[undefined, true]"}}<i class="fa fa-2x fa-cog"></i><br><span>Settings</span> {{/Surface}}
+      {{/GridLayout}}
+
+    {{/HeaderFooterLayout}}
+  {{/famousContext}}
+</template>

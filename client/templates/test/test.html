@@ -1,0 +1,13 @@
+<template name="test">
+  {{#Scrollview}}
+
+    {{#famousEach items}}
+      {{>Surface template="testItem" size="[undefined, true]"}}
+    {{/famousEach}}
+
+    {{#Surface}}
+      <a href="{{pathFor 'home'}}" class="btn btn-primary">Home</a>
+    {{/Surface}}
+
+  {{/Scrollview}}
+</template>

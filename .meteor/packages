@@ -7,8 +7,8 @@
 meteor-platform
 autopublish
 insecure
-coffeescript
 gadicohen:famous-views
 mjn:famous
 mizzao:bootstrap-3
 iron:router
+fortawesome:fontawesome
